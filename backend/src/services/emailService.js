@@ -30,7 +30,7 @@ class EmailService {
                 pass: this.transporterSettings.password,
             },
             tls: {  // When using on local host!
-                rejectUnauthorized: true,
+                rejectUnauthorized: false,
             }
         });
         return transporter;

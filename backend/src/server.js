@@ -4,7 +4,6 @@ import cors from 'cors';
 
 // routers
 import {userRouter} from './routes/userRouter.js';
-import {postRouter} from './routes/postRouter.js';
 
 const { urlencoded, json } = bodyParser;
 
@@ -14,8 +13,6 @@ app.use(cors());
 app.use(urlencoded({ extended: true }));
 app.use(json());
 
-// Register the routers:
 app.use("/user", userRouter);
-app.use("/post", postRouter);
 
 export { app };
